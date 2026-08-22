@@ -1,0 +1,177 @@
+/*--- Design Tokens / Variables ---*/
+:root {
+    --primary-color: #253c8a;
+    --primary-hover: #6484ef;
+    --text-color: #333333;
+    --border-color: #d7d7d7;
+    --light-bg: #eaebf5;
+    --max-width: 960px;
+}
+
+/*--- General Site Layout & Resets ---*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.6; /* Marginally increased for better legibility */
+    font-family: system-ui, -apple-system, sans-serif; /* Modern fallback stack */
+    color: var(--text-color);
+}
+
+header, main {
+    width: 100%;
+    max-width: var(--max-width);
+    padding: 0 2em;
+}
+
+header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    margin-top: auto;
+    background-color: #d4d4d4;
+    align-self: stretch;
+    text-align: center;
+    padding: 1.5em 1em;
+}
+
+/*--- Typography ---*/
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+    margin-top: 1.2em;
+    margin-bottom: 0.4em;
+    font-weight: 600; /
+}
+
+p {
+    margin: 0.6em 0;
+}
+
+/*--- Updated Header & Navigation Layout ---*/
+.site-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    min-height: 7em;
+}
+
+.logo-link {
+    display: flex; 
+}
+
+.logo {
+    max-height: 3.5em; 
+    width: auto;
+}
+
+.navigation ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1em; /* Clean, modern spacing mechanism */
+}
+
+.navigation a {
+    color: var(--primary-color);
+    padding: 0.7em;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease-in-out; /* Smooth hover transition */
+}
+
+.navigation a:hover {
+    color: var(--primary-hover);
+}
+
+/*--- Enhanced Table Styling ---*/
+table {
+    width: 100%; 
+    margin: 2em 0;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: var(--light-bg);
+}
+
+th, td {
+    border: 1px solid var(--border-color);
+    padding: 0.75em 1em; 
+    text-align: left;
+}
+
+/*--- Clean Form Design ---*/
+form {
+    max-width: 40em;
+    border: 1px solid var(--border-color);
+    padding: 2em;
+    margin: 2em 0;
+    border-radius: 0.4em; 
+}
+
+.form-header {
+    margin-top: 0;
+}
+
+.form-description {
+    margin-bottom: 1.5em;
+}
+
+label {
+    display: block; 
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 0.4em;
+}
+
+input[type='text'], 
+input[type='email'], 
+textarea {
+    font-family: inherit; 
+    border: 1px solid #b3b3b3;
+    width: 100%;
+    margin-bottom: 1.2em;
+    padding: 0.6em;
+    border-radius: 0.25em;
+}
+
+input[type='text']:focus, 
+input[type='email']:focus, 
+textarea:focus {
+    outline: 2px solid var(--primary-hover);
+    border-color: transparent;
+}
+
+input[type='radio'] {
+    display: inline-block;
+    margin-right: 0.5em;
+}
+
+textarea {
+    resize: vertical; /
+    min-height: 6em;
+}
+
+input[type='submit'] {
+    width: auto;
+    padding: 0.75em 2.5em;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.3em;
+    font-weight: bold;
+    cursor: pointer; 
+    transition: background-color 0.2s ease;
+}
+
+input[type='submit']:hover {
+    background-color: var(--primary-hover);
+}
